@@ -1,0 +1,60 @@
+:root {
+    color-scheme: light;
+    --color-paper: #FCF8F5;
+    --color-paper-2: #F3E6E2;
+    --color-ink: #362B2A;
+    --color-accent: #AE736C;
+    --color-rule: #D8BDB7;
+    --color-muted: #5B4845;
+    --color-action: #89534E;
+    --color-action-hover: #713F3B;
+    --color-on-action: #FCF8F5;
+    --color-control: #987670;
+    --color-focus: #89534E;
+    --color-hover: color-mix(in srgb, var(--color-accent) 11%, transparent);
+
+    --font-display: "Lora", Georgia, serif;
+    --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+    --text-caption: 0.8125rem;
+    --text-small: 0.875rem;
+    --text-body: 1rem;
+    --text-lead: clamp(1rem, 1.2vw + 0.25rem, 1.125rem);
+    --text-title: clamp(1.375rem, 1vw + 1rem, 1.875rem);
+    --text-page: clamp(2.5rem, 4.9vw, 4.5rem);
+    --text-hero: clamp(2.5rem, 5.65vw, 5.375rem);
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --container: 1200px;
+    --gutter: clamp(16px, 5vw, 64px);
+    --radius-control: 8px;
+    --radius-panel: 20px;
+    --target: 44px;
+    --duration: 160ms;
+    --ease-out: cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-paper: #271F1E;
+    --color-paper-2: #352827;
+    --color-ink: #F5E8E3;
+    --color-accent: #D19C94;
+    --color-rule: #614947;
+    --color-muted: #CBB3AE;
+    --color-action: #E2ACA3;
+    --color-action-hover: #F0C0B8;
+    --color-on-action: #271F1E;
+    --color-control: #AB8680;
+    --color-focus: #E2ACA3;
+}

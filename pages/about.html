@@ -2,66 +2,73 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Giới thiệu về tôi, các kỹ năng tôi đang học và mục tiêu của tôi.">
     <title>Giới thiệu | MyWebsite</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Đến nội dung chính</a>
+
     <header class="header">
-        <nav class="navbar" aria-label="Điều hướng chính">
+        <nav class="navbar wrap" aria-label="Điều hướng chính">
             <a href="../index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
                 <a href="../index.html">Trang chủ</a>
-                <a href="about.html">Giới thiệu</a>
+                <a href="about.html" aria-current="page">Giới thiệu</a>
                 <a href="projects.html">Dự án</a>
                 <a href="blog.html">Blog</a>
                 <a href="tools.html">Công cụ</a>
             </div>
 
-            <button id="theme-toggle"
-                    type="button"
-                    aria-label="Đổi giao diện">🌙</button>
+            <button id="theme-toggle" class="theme-toggle" type="button"
+                    aria-label="Chế độ tối" aria-pressed="false" hidden>
+                <span class="theme-icon" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main class="section page-content">
-        <h1>Giới thiệu bản thân</h1>
-        <p>
-            Xin chào! Tôi là một người yêu thích
-            công nghệ và lập trình.
-        </p>
+    <main id="main" class="page wrap" tabindex="-1">
+        <section class="page-layout" aria-labelledby="page-title">
+            <div class="page-intro" data-enter>
+                <h1 id="page-title">Giới thiệu bản thân</h1>
+                <p class="lead">Xin chào, tôi là một người yêu thích công nghệ và lập trình.</p>
+            </div>
 
-        <h2>Về tôi</h2>
-        <p>
-            Tôi đang học phát triển phần mềm
-            và xây dựng các sản phẩm của riêng mình.
-        </p>
+            <div class="page-details">
+                <section class="editorial-entry">
+                    <h2>Về tôi</h2>
+                    <p>Tôi đang học phát triển phần mềm và xây dựng các sản phẩm của riêng mình.</p>
+                </section>
 
-        <h2>Kỹ năng đang học</h2>
-        <div class="card-grid">
-            <article class="card">
-                <h3>Ngôn ngữ lập trình</h3>
-                <p>C, C++, JavaScript, HTML, CSS</p>
-            </article>
+                <section class="panel editorial-entry">
+                    <h2>Kỹ năng đang học</h2>
+                    <dl class="skill-list">
+                        <div>
+                            <dt>Ngôn ngữ lập trình</dt>
+                            <dd>C, C++, JavaScript, HTML, CSS</dd>
+                        </div>
+                        <div>
+                            <dt>Công cụ</dt>
+                            <dd>Git, GitHub, VS Code</dd>
+                        </div>
+                    </dl>
+                </section>
 
-            <article class="card">
-                <h3>Công cụ</h3>
-                <p>Git, GitHub, VS Code</p>
-            </article>
-        </div>
-
-        <h2>Mục tiêu</h2>
-        <p>
-            Không ngừng học hỏi, phát triển kỹ năng
-            và tạo ra những dự án có ích.
-        </p>
+                <section class="editorial-entry">
+                    <h2>Mục tiêu</h2>
+                    <p>Không ngừng học hỏi, phát triển kỹ năng và tạo ra những dự án có ích.</p>
+                </section>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> MyWebsite</p>
+        <div class="wrap">
+            <p>© <span id="year"></span> MyWebsite</p>
+        </div>
     </footer>
 </body>
 </html>

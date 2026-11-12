@@ -2,63 +2,66 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Những sản phẩm và dự án lập trình tôi đã xây dựng.">
     <title>Dự án | MyWebsite</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Đến nội dung chính</a>
+
     <header class="header">
-        <nav class="navbar" aria-label="Điều hướng chính">
+        <nav class="navbar wrap" aria-label="Điều hướng chính">
             <a href="../index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
                 <a href="../index.html">Trang chủ</a>
                 <a href="about.html">Giới thiệu</a>
-                <a href="projects.html">Dự án</a>
+                <a href="projects.html" aria-current="page">Dự án</a>
                 <a href="blog.html">Blog</a>
                 <a href="tools.html">Công cụ</a>
             </div>
 
-            <button id="theme-toggle"
-                    type="button"
-                    aria-label="Đổi giao diện">🌙</button>
+            <button id="theme-toggle" class="theme-toggle" type="button"
+                    aria-label="Chế độ tối" aria-pressed="false" hidden>
+                <span class="theme-icon" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main class="section page-content">
-        <h1>Dự án của tôi</h1>
-        <p>
-            Nơi lưu trữ và giới thiệu những sản phẩm
-            mà tôi đã xây dựng.
-        </p>
-
-        <div class="card-grid">
-            <article class="card">
-                <h2>Website cá nhân</h2>
-                <p>
-                    Website đa trang sử dụng
-                    HTML, CSS và JavaScript.
+    <main id="main" class="page wrap" tabindex="-1">
+        <section class="page-layout" aria-labelledby="page-title">
+            <div class="page-intro" data-enter>
+                <h1 id="page-title">Dự án của tôi</h1>
+                <p class="lead">
+                    Nơi lưu trữ và giới thiệu những sản phẩm mà tôi đã xây dựng.
                 </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-            </article>
+            </div>
 
-            <article class="card">
-                <h2>Dự án tương lai</h2>
-                <p>
-                    Những dự án tiếp theo sẽ được
-                    cập nhật tại đây.
-                </p>
-                <span class="tag">Coming soon</span>
-            </article>
-        </div>
+            <div class="page-details">
+                <article class="panel editorial-entry">
+                    <h2>Website cá nhân</h2>
+                    <p>Website đa trang sử dụng HTML, CSS và JavaScript.</p>
+                    <ul class="tag-list" role="list" aria-label="Công nghệ">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="editorial-entry ruled-entry">
+                    <h2>Dự án tương lai</h2>
+                    <p>Những dự án tiếp theo sẽ được cập nhật tại đây.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> MyWebsite</p>
+        <div class="wrap">
+            <p>© <span id="year"></span> MyWebsite</p>
+        </div>
     </footer>
 </body>
 </html>

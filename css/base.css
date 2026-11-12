@@ -1,0 +1,88 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    overflow-x: clip;
+}
+
+html {
+    scrollbar-color: var(--color-control) var(--color-paper);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100svh;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    caret-color: var(--color-action);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.65;
+}
+
+main {
+    flex: 1;
+    min-inline-size: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.24;
+    text-wrap: balance;
+}
+
+p {
+    margin: 0;
+    text-wrap: pretty;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.24em;
+}
+
+button, textarea {
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--color-action);
+    color: var(--color-on-action);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.wrap {
+    width: min(calc(100% - 2 * var(--gutter)), var(--container));
+    margin-inline: auto;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 2;
+    inset-block-start: var(--space-2);
+    inset-inline-start: var(--gutter);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-control);
+    background: var(--color-paper);
+    color: var(--color-action);
+    transform: translateY(calc(-100% - var(--space-4)));
+}
+
+.skip-link:focus {
+    transform: none;
+}

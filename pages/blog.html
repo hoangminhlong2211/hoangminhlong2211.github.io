@@ -2,61 +2,67 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ghi chép về lập trình web, cấu trúc dữ liệu và giải thuật.">
     <title>Blog | MyWebsite</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Đến nội dung chính</a>
+
     <header class="header">
-        <nav class="navbar" aria-label="Điều hướng chính">
+        <nav class="navbar wrap" aria-label="Điều hướng chính">
             <a href="../index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
                 <a href="../index.html">Trang chủ</a>
                 <a href="about.html">Giới thiệu</a>
                 <a href="projects.html">Dự án</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" aria-current="page">Blog</a>
                 <a href="tools.html">Công cụ</a>
             </div>
 
-            <button id="theme-toggle"
-                    type="button"
-                    aria-label="Đổi giao diện">🌙</button>
+            <button id="theme-toggle" class="theme-toggle" type="button"
+                    aria-label="Chế độ tối" aria-pressed="false" hidden>
+                <span class="theme-icon" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main class="section page-content">
-        <h1>Blog cá nhân</h1>
-        <p>
-            Nơi tôi lưu lại những kiến thức
-            và trải nghiệm trong quá trình học tập.
-        </p>
-
-        <div class="card-grid">
-            <article class="card">
-                <h2>Hành trình học lập trình web</h2>
-                <p>
-                    Những kiến thức đầu tiên về
-                    HTML, CSS và JavaScript.
+    <main id="main" class="page wrap" tabindex="-1">
+        <section class="page-layout" aria-labelledby="page-title">
+            <div class="page-intro" data-enter>
+                <h1 id="page-title">Blog cá nhân</h1>
+                <p class="lead">
+                    Nơi tôi lưu lại những kiến thức và trải nghiệm trong quá trình học tập.
                 </p>
-                <span class="tag">Web Development</span>
-            </article>
+            </div>
 
-            <article class="card">
-                <h2>Ghi chú về thuật toán</h2>
-                <p>
-                    Tổng hợp các kiến thức về
-                    cấu trúc dữ liệu và giải thuật.
-                </p>
-                <span class="tag">DSA</span>
-            </article>
-        </div>
+            <div class="page-details">
+                <article class="editorial-entry ruled-entry">
+                    <h2>Hành trình học lập trình web</h2>
+                    <p>Những kiến thức đầu tiên về HTML, CSS và JavaScript.</p>
+                    <ul class="tag-list" aria-label="Chủ đề" role="list">
+                        <li lang="en">Web Development</li>
+                    </ul>
+                </article>
+
+                <article class="editorial-entry ruled-entry">
+                    <h2>Ghi chú về thuật toán</h2>
+                    <p>Tổng hợp các kiến thức về cấu trúc dữ liệu và giải thuật.</p>
+                    <ul class="tag-list" aria-label="Chủ đề" role="list">
+                        <li lang="en">DSA</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> MyWebsite</p>
+        <div class="wrap">
+            <p>© <span id="year"></span> MyWebsite</p>
+        </div>
     </footer>
 </body>
 </html>

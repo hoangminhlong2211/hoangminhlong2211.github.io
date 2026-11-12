@@ -2,15 +2,17 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Các tiện ích JavaScript tôi tự phát triển, gồm công cụ đếm ký tự.">
     <title>Công cụ | MyWebsite</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Đến nội dung chính</a>
+
     <header class="header">
-        <nav class="navbar" aria-label="Điều hướng chính">
+        <nav class="navbar wrap" aria-label="Điều hướng chính">
             <a href="../index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
@@ -18,51 +20,47 @@
                 <a href="about.html">Giới thiệu</a>
                 <a href="projects.html">Dự án</a>
                 <a href="blog.html">Blog</a>
-                <a href="tools.html">Công cụ</a>
+                <a href="tools.html" aria-current="page">Công cụ</a>
             </div>
 
-            <button id="theme-toggle"
-                    type="button"
-                    aria-label="Đổi giao diện">🌙</button>
+            <button id="theme-toggle" class="theme-toggle" type="button"
+                    aria-label="Chế độ tối" aria-pressed="false" hidden>
+                <span class="theme-icon" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main class="section page-content">
-        <h1>Công cụ tiện ích</h1>
-        <p>
-            Những ứng dụng nhỏ tôi tự phát triển
-            bằng JavaScript.
-        </p>
+    <main id="main" class="page wrap" tabindex="-1">
+        <section class="page-layout" aria-labelledby="page-title">
+            <div class="page-intro" data-enter>
+                <h1 id="page-title">Công cụ tiện ích</h1>
+                <p class="lead">Những ứng dụng nhỏ tôi tự phát triển bằng JavaScript.</p>
+            </div>
 
-        <div class="card-grid">
-            <article class="card">
-                <h2>Đếm ký tự</h2>
+            <div class="page-details">
+                <article class="panel editorial-entry counter">
+                    <h2>Đếm ký tự</h2>
+                    <label for="text-input">Nhập văn bản</label>
+                    <textarea id="text-input" rows="5" placeholder="Nhập nội dung..."></textarea>
+                    <p class="counter-status">
+                        <span id="count-label">Số ký tự</span>
+                        <output id="char-count" for="text-input" aria-labelledby="count-label">0</output>
+                    </p>
+                    <noscript><p>Bật JavaScript để sử dụng bộ đếm ký tự.</p></noscript>
+                </article>
 
-                <label for="text-input">
-                    Nhập văn bản:
-                </label>
-
-                <textarea id="text-input"
-                          placeholder="Nhập nội dung..."></textarea>
-
-                <p>
-                    Số ký tự:
-                    <strong id="char-count">0</strong>
-                </p>
-            </article>
-
-            <article class="card">
-                <h2>Công cụ sắp ra mắt</h2>
-                <p>
-                    Tôi sẽ bổ sung các tiện ích
-                    và ứng dụng mới trong tương lai.
-                </p>
-            </article>
-        </div>
+                <article class="editorial-entry ruled-entry">
+                    <h2>Công cụ sắp ra mắt</h2>
+                    <p>Tôi sẽ bổ sung các tiện ích và ứng dụng mới trong tương lai.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> MyWebsite</p>
+        <div class="wrap">
+            <p>© <span id="year"></span> MyWebsite</p>
+        </div>
     </footer>
 </body>
 </html>

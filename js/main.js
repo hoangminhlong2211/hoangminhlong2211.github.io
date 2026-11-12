@@ -1,86 +1,48 @@
+const root = document.documentElement;
 
-// =======================================
-// 1. CHẾ ĐỘ SÁNG / TỐI
-// =======================================
+// Apply the saved theme before the page renders.
+try {
+    if (localStorage.getItem("theme") === "dark") {
+        root.dataset.theme = "dark";
+    }
+} catch {
+    // The light theme works when storage is unavailable.
+}
 
-const themeButton = document.getElementById("theme-toggle");
-
-function updateTheme(theme) {
-    const isLight = theme === "light";
-
-    document.body.classList.toggle("light", isLight);
+document.addEventListener("DOMContentLoaded", () => {
+    const themeButton = document.getElementById("theme-toggle");
+    const year = document.getElementById("year");
+    const textInput = document.getElementById("text-input");
+    const charCount = document.getElementById("char-count");
 
     if (themeButton) {
-        themeButton.textContent = isLight ? "☀️" : "🌙";
-        themeButton.setAttribute(
-            "aria-pressed",
-            String(isLight)
-        );
-        themeButton.setAttribute(
-            "aria-label",
-            isLight ? "Bật chế độ tối" : "Bật chế độ sáng"
-        );
+        themeButton.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
+        themeButton.hidden = false;
+
+        themeButton.addEventListener("click", () => {
+            const theme = root.dataset.theme === "dark" ? "light" : "dark";
+            root.dataset.theme = theme;
+            themeButton.setAttribute("aria-pressed", String(theme === "dark"));
+
+            try {
+                localStorage.setItem("theme", theme);
+            } catch {
+                // Keep the selected theme for this page.
+            }
+        });
     }
-}
 
-// Đọc chế độ giao diện đã lưu
-const savedTheme = localStorage.getItem("theme");
-updateTheme(savedTheme === "light" ? "light" : "dark");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-if (themeButton) {
-    themeButton.addEventListener("click", () => {
-        const isLight =
-            document.body.classList.contains("light");
+    if (textInput && charCount) {
+        const updateCount = () => {
+            charCount.value = String(textInput.value.length);
+        };
 
-        const newTheme = isLight ? "dark" : "light";
-
-        updateTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-    });
-}
-
-
-// =======================================
-// 2. TỰ ĐỘNG ĐÁNH DẤU MENU
-// =======================================
-
-const currentPath = window.location.pathname;
-const navLinks = document.querySelectorAll(".nav-links a");
-
-navLinks.forEach(link => {
-    const linkPath = new URL(link.href).pathname;
-
-    // Chuẩn hóa dấu / ở cuối đường dẫn
-    const normalize = path =>
-        path.replace(/\/index\.html$/, "/");
-
-    if (normalize(linkPath) === normalize(currentPath)) {
-        link.classList.add("active");
-        link.setAttribute("aria-current", "page");
+        textInput.addEventListener("input", updateCount);
+        window.addEventListener("pageshow", updateCount);
+        updateCount();
     }
 });
-
-
-// =======================================
-// 3. CÔNG CỤ ĐẾM KÝ TỰ
-// =======================================
-
-const textInput = document.getElementById("text-input");
-const charCount = document.getElementById("char-count");
-
-if (textInput && charCount) {
-    textInput.addEventListener("input", () => {
-        charCount.textContent = textInput.value.length;
-    });
-}
-
-
-// =======================================
-// 4. NĂM HIỆN TẠI
-// =======================================
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}

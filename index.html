@@ -2,82 +2,93 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Website cá nhân chia sẻ dự án, kiến thức và công cụ.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website cá nhân chia sẻ dự án, kiến thức lập trình và công cụ.">
     <title>Trang chủ | MyWebsite</title>
-
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Đến nội dung chính</a>
+
     <header class="header">
-        <nav class="navbar" aria-label="Điều hướng chính">
+        <nav class="navbar wrap" aria-label="Điều hướng chính">
             <a href="index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
-                <a href="index.html">Trang chủ</a>
+                <a href="index.html" aria-current="page">Trang chủ</a>
                 <a href="pages/about.html">Giới thiệu</a>
                 <a href="pages/projects.html">Dự án</a>
                 <a href="pages/blog.html">Blog</a>
                 <a href="pages/tools.html">Công cụ</a>
             </div>
 
-            <button id="theme-toggle"
-                    type="button"
-                    aria-label="Đổi giao diện">🌙</button>
+            <button id="theme-toggle" class="theme-toggle" type="button"
+                    aria-label="Chế độ tối" aria-pressed="false" hidden>
+                <span class="theme-icon" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Xin chào, tôi là <span>Developer</span></h1>
-
-            <p>
-                Chào mừng đến với không gian cá nhân của tôi.
-                Nơi chia sẻ các dự án, kiến thức lập trình
-                và những sản phẩm tôi đang phát triển.
-            </p>
-
-            <a href="pages/projects.html" class="btn">
-                Khám phá dự án
-            </a>
-        </section>
-
-        <section class="section">
-            <h2>Khám phá website</h2>
-
-            <div class="card-grid">
-                <a class="card card-link"
-                   href="pages/about.html">
-                    <h3>👤 Giới thiệu</h3>
-                    <p>Tìm hiểu thêm về tôi và kỹ năng.</p>
-                </a>
-
-                <a class="card card-link"
-                   href="pages/projects.html">
-                    <h3>💻 Dự án</h3>
-                    <p>Các sản phẩm tôi đã xây dựng.</p>
-                </a>
-
-                <a class="card card-link"
-                   href="pages/blog.html">
-                    <h3>📚 Blog</h3>
-                    <p>Ghi chép và chia sẻ kiến thức.</p>
-                </a>
-
-                <a class="card card-link"
-                   href="pages/tools.html">
-                    <h3>🛠️ Công cụ</h3>
-                    <p>Các ứng dụng và tiện ích nhỏ.</p>
+    <main id="main" class="home wrap" tabindex="-1">
+        <section class="hero" aria-labelledby="page-title">
+            <div data-enter>
+                <h1 id="page-title">Xin chào, <span>tôi là Developer</span></h1>
+                <p class="lead">Đây là nơi tôi chia sẻ các dự án, kiến thức lập trình và những sản phẩm đang phát triển.</p>
+                <a href="pages/projects.html" class="btn">
+                    Khám phá dự án
+                    <span class="arrow" aria-hidden="true"></span>
                 </a>
             </div>
+
+            <section class="panel contents" aria-labelledby="contents-title">
+                <h2 id="contents-title">Khám phá website</h2>
+                <ul>
+                    <li>
+                        <a href="pages/about.html">
+                            <div>
+                                <h3>Giới thiệu</h3>
+                                <small>Tìm hiểu thêm về tôi và kỹ năng.</small>
+                            </div>
+                            <span class="arrow" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/projects.html">
+                            <div>
+                                <h3>Dự án</h3>
+                                <small>Các sản phẩm tôi đã xây dựng.</small>
+                            </div>
+                            <span class="arrow" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/blog.html">
+                            <div>
+                                <h3>Blog</h3>
+                                <small>Ghi chép và chia sẻ kiến thức.</small>
+                            </div>
+                            <span class="arrow" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/tools.html">
+                            <div>
+                                <h3>Công cụ</h3>
+                                <small>Các ứng dụng và tiện ích nhỏ.</small>
+                            </div>
+                            <span class="arrow" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> MyWebsite</p>
+        <div class="wrap">
+            <p>© <span id="year"></span> MyWebsite</p>
+        </div>
     </footer>
 </body>
 </html>
