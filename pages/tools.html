@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Công cụ | MyWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar" aria-label="Điều hướng chính">
+            <a href="../index.html" class="logo">MyWebsite</a>
+
+            <div class="nav-links">
+                <a href="../index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="projects.html">Dự án</a>
+                <a href="blog.html">Blog</a>
+                <a href="tools.html">Công cụ</a>
+            </div>
+
+            <button id="theme-toggle"
+                    type="button"
+                    aria-label="Đổi giao diện">🌙</button>
+        </nav>
+    </header>
+
+    <main class="section page-content">
+        <h1>Công cụ tiện ích</h1>
+        <p>
+            Những ứng dụng nhỏ tôi tự phát triển
+            bằng JavaScript.
+        </p>
+
+        <div class="card-grid">
+            <article class="card">
+                <h2>Đếm ký tự</h2>
+
+                <label for="text-input">
+                    Nhập văn bản:
+                </label>
+
+                <textarea id="text-input"
+                          placeholder="Nhập nội dung..."></textarea>
+
+                <p>
+                    Số ký tự:
+                    <strong id="char-count">0</strong>
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Công cụ sắp ra mắt</h2>
+                <p>
+                    Tôi sẽ bổ sung các tiện ích
+                    và ứng dụng mới trong tương lai.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> MyWebsite</p>
+    </footer>
+</body>
+</html>

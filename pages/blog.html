@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Blog | MyWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar" aria-label="Điều hướng chính">
+            <a href="../index.html" class="logo">MyWebsite</a>
+
+            <div class="nav-links">
+                <a href="../index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="projects.html">Dự án</a>
+                <a href="blog.html">Blog</a>
+                <a href="tools.html">Công cụ</a>
+            </div>
+
+            <button id="theme-toggle"
+                    type="button"
+                    aria-label="Đổi giao diện">🌙</button>
+        </nav>
+    </header>
+
+    <main class="section page-content">
+        <h1>Blog cá nhân</h1>
+        <p>
+            Nơi tôi lưu lại những kiến thức
+            và trải nghiệm trong quá trình học tập.
+        </p>
+
+        <div class="card-grid">
+            <article class="card">
+                <h2>Hành trình học lập trình web</h2>
+                <p>
+                    Những kiến thức đầu tiên về
+                    HTML, CSS và JavaScript.
+                </p>
+                <span class="tag">Web Development</span>
+            </article>
+
+            <article class="card">
+                <h2>Ghi chú về thuật toán</h2>
+                <p>
+                    Tổng hợp các kiến thức về
+                    cấu trúc dữ liệu và giải thuật.
+                </p>
+                <span class="tag">DSA</span>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> MyWebsite</p>
+    </footer>
+</body>
+</html>

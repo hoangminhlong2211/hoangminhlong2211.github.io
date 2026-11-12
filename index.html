@@ -4,82 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <meta name="description"
+          content="Website cá nhân chia sẻ dự án, kiến thức và công cụ.">
+    <title>Trang chủ | MyWebsite</title>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <a href="#home" class="logo">MyWebsite</a>
+        <nav class="navbar" aria-label="Điều hướng chính">
+            <a href="index.html" class="logo">MyWebsite</a>
 
             <div class="nav-links">
-                <a href="#home">Trang chủ</a>
-                <a href="#about">Giới thiệu</a>
-                <a href="#projects">Dự án</a>
-                <a href="#tools">Công cụ</a>
+                <a href="index.html">Trang chủ</a>
+                <a href="pages/about.html">Giới thiệu</a>
+                <a href="pages/projects.html">Dự án</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/tools.html">Công cụ</a>
             </div>
 
             <button id="theme-toggle"
-                    aria-label="Đổi giao diện"
-                    aria-pressed="false">🌙</button>
+                    type="button"
+                    aria-label="Đổi giao diện">🌙</button>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section class="hero">
             <h1>Xin chào, tôi là <span>Developer</span></h1>
+
             <p>
-                Chào mừng đến với website cá nhân
-                của tôi, nơi chia sẻ các dự án,
-                kiến thức và những điều thú vị.
+                Chào mừng đến với không gian cá nhân của tôi.
+                Nơi chia sẻ các dự án, kiến thức lập trình
+                và những sản phẩm tôi đang phát triển.
             </p>
-            <a href="#projects" class="btn">
+
+            <a href="pages/projects.html" class="btn">
                 Khám phá dự án
             </a>
         </section>
 
-        <section id="about" class="section">
-            <h2>Giới thiệu</h2>
-            <p>
-                Tôi đang học lập trình và phát triển
-                các sản phẩm công nghệ.
-            </p>
-        </section>
+        <section class="section">
+            <h2>Khám phá website</h2>
 
-        <section id="projects" class="section">
-            <h2>Dự án của tôi</h2>
             <div class="card-grid">
-                <article class="card">
-                    <h3>Website cá nhân</h3>
-                    <p>
-                        Website đầu tiên được xây dựng
-                        bằng HTML, CSS và JavaScript.
-                    </p>
-                </article>
+                <a class="card card-link"
+                   href="pages/about.html">
+                    <h3>👤 Giới thiệu</h3>
+                    <p>Tìm hiểu thêm về tôi và kỹ năng.</p>
+                </a>
 
-                <article class="card">
-                    <h3>Dự án tiếp theo</h3>
-                    <p>
-                        Những sản phẩm mới sẽ được
-                        bổ sung tại đây.
-                    </p>
-                </article>
-            </div>
-        </section>
+                <a class="card card-link"
+                   href="pages/projects.html">
+                    <h3>💻 Dự án</h3>
+                    <p>Các sản phẩm tôi đã xây dựng.</p>
+                </a>
 
-        <section id="tools" class="section">
-            <h2>Công cụ</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Đếm ký tự</h3>
-                    <textarea id="text-input"
-                              placeholder="Nhập văn bản..."></textarea>
-                    <p>
-                        Số ký tự:
-                        <strong id="char-count">0</strong>
-                    </p>
-                </article>
+                <a class="card card-link"
+                   href="pages/blog.html">
+                    <h3>📚 Blog</h3>
+                    <p>Ghi chép và chia sẻ kiến thức.</p>
+                </a>
+
+                <a class="card card-link"
+                   href="pages/tools.html">
+                    <h3>🛠️ Công cụ</h3>
+                    <p>Các ứng dụng và tiện ích nhỏ.</p>
+                </a>
             </div>
         </section>
     </main>

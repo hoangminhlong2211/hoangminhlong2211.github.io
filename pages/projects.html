@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Dự án | MyWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar" aria-label="Điều hướng chính">
+            <a href="../index.html" class="logo">MyWebsite</a>
+
+            <div class="nav-links">
+                <a href="../index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="projects.html">Dự án</a>
+                <a href="blog.html">Blog</a>
+                <a href="tools.html">Công cụ</a>
+            </div>
+
+            <button id="theme-toggle"
+                    type="button"
+                    aria-label="Đổi giao diện">🌙</button>
+        </nav>
+    </header>
+
+    <main class="section page-content">
+        <h1>Dự án của tôi</h1>
+        <p>
+            Nơi lưu trữ và giới thiệu những sản phẩm
+            mà tôi đã xây dựng.
+        </p>
+
+        <div class="card-grid">
+            <article class="card">
+                <h2>Website cá nhân</h2>
+                <p>
+                    Website đa trang sử dụng
+                    HTML, CSS và JavaScript.
+                </p>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+            </article>
+
+            <article class="card">
+                <h2>Dự án tương lai</h2>
+                <p>
+                    Những dự án tiếp theo sẽ được
+                    cập nhật tại đây.
+                </p>
+                <span class="tag">Coming soon</span>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> MyWebsite</p>
+    </footer>
+</body>
+</html>
