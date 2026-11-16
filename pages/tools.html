@@ -13,7 +13,10 @@
 
     <header class="header">
         <nav class="navbar wrap" aria-label="Điều hướng chính">
-            <a href="../index.html" class="logo">MyWebsite</a>
+            <a href="../index.html" class="logo">
+                <span class="logo-mark" aria-hidden="true"></span>
+                MyWebsite
+            </a>
 
             <div class="nav-links">
                 <a href="../index.html">Trang chủ</a>
@@ -32,13 +35,13 @@
 
     <main id="main" class="page wrap" tabindex="-1">
         <section class="page-layout" aria-labelledby="page-title">
-            <div class="page-intro" data-enter>
+            <div class="tile tile--sage page-intro" data-enter>
                 <h1 id="page-title">Công cụ tiện ích</h1>
                 <p class="lead">Những ứng dụng nhỏ tôi tự phát triển bằng JavaScript.</p>
             </div>
 
             <div class="page-details">
-                <article class="panel editorial-entry counter">
+                <article id="dem-ky-tu" class="tile tile--sand page-entry counter">
                     <h2>Đếm ký tự</h2>
                     <label for="text-input">Nhập văn bản</label>
                     <textarea id="text-input" rows="5" placeholder="Nhập nội dung..."></textarea>
@@ -49,7 +52,7 @@
                     <noscript><p>Bật JavaScript để sử dụng bộ đếm ký tự.</p></noscript>
                 </article>
 
-                <article class="editorial-entry ruled-entry">
+                <article class="tile tile--mint page-entry">
                     <h2>Công cụ sắp ra mắt</h2>
                     <p>Tôi sẽ bổ sung các tiện ích và ứng dụng mới trong tương lai.</p>
                 </article>

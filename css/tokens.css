@@ -1,28 +1,27 @@
 :root {
     color-scheme: light;
-    --color-paper: #FCF8F5;
-    --color-paper-2: #F3E6E2;
-    --color-ink: #362B2A;
-    --color-accent: #AE736C;
-    --color-rule: #D8BDB7;
-    --color-muted: #5B4845;
-    --color-action: #89534E;
-    --color-action-hover: #713F3B;
-    --color-on-action: #FCF8F5;
-    --color-control: #987670;
-    --color-focus: #89534E;
-    --color-hover: color-mix(in srgb, var(--color-accent) 11%, transparent);
+    --color-paper: #f7f5ee;
+    --color-sage: #e8eddf;
+    --color-green: #d5e7d8;
+    --color-sand: #eee8da;
+    --color-mint: #e3ebe7;
+    --color-ink: #20342a;
+    --color-muted: #41564a;
+    --color-rule: #d8ded1;
+    --color-control: #78877b;
+    --color-action: #264a37;
+    --color-action-hover: #183b2a;
+    --color-on-action: #f7f8f1;
+    --color-focus: #2b6644;
+    --color-hover: color-mix(in srgb, var(--color-ink) 7%, transparent);
 
-    --font-display: "Lora", Georgia, serif;
     --font-body: "Be Vietnam Pro", system-ui, sans-serif;
     --text-caption: 0.8125rem;
     --text-small: 0.875rem;
     --text-body: 1rem;
-    --text-lead: clamp(1rem, 1.2vw + 0.25rem, 1.125rem);
-    --text-title: clamp(1.375rem, 1vw + 1rem, 1.875rem);
-    --text-page: clamp(2.5rem, 4.9vw, 4.5rem);
-    --text-hero: clamp(2.5rem, 5.65vw, 5.375rem);
-
+    --text-title: clamp(1.25rem, 2vw, 1.875rem);
+    --text-page: clamp(2.25rem, 4.5vw, 4.375rem);
+    --text-hero: clamp(2.125rem, 5.1vw, 4.625rem);
     --space-1: 4px;
     --space-2: 8px;
     --space-3: 12px;
@@ -33,12 +32,10 @@
     --space-10: 40px;
     --space-12: 48px;
     --space-16: 64px;
-    --space-20: 80px;
-    --space-24: 96px;
-    --container: 1200px;
+    --container: 1120px;
     --gutter: clamp(16px, 5vw, 64px);
-    --radius-control: 8px;
-    --radius-panel: 20px;
+    --radius-control: 10px;
+    --radius-panel: clamp(17px, 2vw, 24px);
     --target: 44px;
     --duration: 160ms;
     --ease-out: cubic-bezier(0.2, 0.65, 0.3, 1);
@@ -46,15 +43,17 @@
 
 :root[data-theme="dark"] {
     color-scheme: dark;
-    --color-paper: #271F1E;
-    --color-paper-2: #352827;
-    --color-ink: #F5E8E3;
-    --color-accent: #D19C94;
-    --color-rule: #614947;
-    --color-muted: #CBB3AE;
-    --color-action: #E2ACA3;
-    --color-action-hover: #F0C0B8;
-    --color-on-action: #271F1E;
-    --color-control: #AB8680;
-    --color-focus: #E2ACA3;
+    --color-paper: #1d2420;
+    --color-sage: #29382e;
+    --color-green: #324c3a;
+    --color-sand: #39382d;
+    --color-mint: #2d3c39;
+    --color-ink: #edf4e9;
+    --color-muted: #c5d4c7;
+    --color-rule: #45564a;
+    --color-control: #94a79a;
+    --color-action: #c4e5ca;
+    --color-action-hover: #e2f2df;
+    --color-on-action: #20342a;
+    --color-focus: #b4e3bf;
 }
